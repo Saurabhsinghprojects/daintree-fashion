@@ -1,0 +1,98 @@
+<!-- <section class="ftco-quote ftco-animate">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-9 req-quote py-5 align-items-center img"
+        style="background-image:url(images/xbg_1.jpg.pagespeed.ic.Rc7__EapJ0.jpg);">
+        <h3 class="ml-md-3" style="color: rgb(236, 22, 87);">Start-Up Of The Year</h3>
+        <span class="ml-md-3" style="color: grey;">Founded by Omega foundation</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+<footer class="ftco-footer ftco-section img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-3">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Daintree</h2>
+          <p>Daintree Fashion here comes up with a purpose and fraternizing industry's best Fashion Stylists, Image
+            consultants, and Personality Coaches to make our Women more Gorgeous and Memorable.</p>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Recent Blog</h2>
+
+          <% for(var i=0;i<recentBlogs.length; i++){ %>
+            <% if(i<2){ %>
+
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image:url('<%=recentBlogs[i].image %>')"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="/post/<%= recentBlogs[i]._id %>">
+                      <%=recentBlogs[i].title %>
+                    </a></h3>
+                  <div class="meta">
+                    <div><span class="icon-calendar"></span>
+                      <%= recentBlogs[i].datePosted.toDateString() %>
+                    </div>
+
+                    <div><span class="icon-chat"></span> 19</div>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+                <% } %>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">Site Links</h2>
+          <ul class="list-unstyled">
+            <li><a href="/" class="py-2 d-block">Home</a></li>
+            <li><a href="/about" class="py-2 d-block">About</a></li>
+            <li><a href="/models" class="py-2 d-block">Models</a></li>
+            <li><a href="/services" class="py-2 d-block">Services</a></li>
+            <li><a href="/blogs" class="py-2 d-block">Blogs</a></li>
+            <% if(loggedIn) { %>
+              <!-- <li><a href="/posts/new" class="py-2 d-block">New Post</a></li> -->
+              <li><a href="/dashboard" class="py-2 d-block">Dashboard</a></li>
+              <li><a href="/auth/logout" class="py-2 d-block">Log out</a></li>
+              <% } %>
+                <% if(!loggedIn) { %>
+                  <li><a href="/auth/register" class="py-2 d-block">New User</a></li>
+                  <li><a href="/auth/login" class="py-2 d-block">Login</a></li>
+                  <% } %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text"> Regal building, Caunnaght place, New
+                  Delhi</span></li>
+              <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9958948407</span></a></li>
+              <li><a href="#"><span class="icon icon-envelope"></span><span class="text"><span class="__cf_email__"
+                      data-cfemail="bbd2d5ddd4fbc2d4cec9dfd4d6dad2d595d8d4d6">info@daintree.fashion</span></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

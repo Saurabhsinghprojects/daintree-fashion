@@ -1,0 +1,16 @@
+<ul>
+    <li class="active"><a href="/"><span><small>01</small>Home</span></a></li>
+    <li><a href="/about"><span><small>02</small>About</span></a></li>
+    <li><a href="/models"><span><small>03</small>Models</span></a></li>
+    <li><a href="/blogs"><span><small>04</small>Blogs</span></a></li>
+    <li><a href="/contact"><span><small>05</small>Contact</span></a></li>
+    <% if(loggedIn) { %>
+    <!-- <li><a href="/posts/new"><span><small>06</small>New Post</span></a></li> -->
+    <li><a href="/dashboard"><span><small>06</small>Dashboard</span></a></li>
+    <li><a href="/auth/logout"><span><small>07</small>Log out</span></a></li>
+    <% } %>
+    <% if(!loggedIn) { %>
+    <li><a href="/auth/register"><span><small>06</small>New User</span></a></li>
+    <li><a href="/auth/login"><span><small>07</small>Login</span></a></li>
+    <% } %>
+</ul>
